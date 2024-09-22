@@ -58,8 +58,8 @@ def create_by_temp_category_df(df):
     return temp_cat_df
 
 # Load cleaned data
-day_clean_df = pd.read_csv("https://raw.githubusercontent.com/halimsajidi/Bike-Sharing-Analysis/main/Data/day.csv")
-hour_df = pd.read_csv("https://raw.githubusercontent.com/halimsajidi/Bike-Sharing-Analysis/main/Dashboard/dataset.csv")
+day_clean_df = pd.read_csv("https://raw.githubusercontent.com/halimsajidi/Bike-Sharing-Analysis/main/Dashboard/dataset_day.csv")
+hour_df = pd.read_csv("https://raw.githubusercontent.com/halimsajidi/Bike-Sharing-Analysis/main/Dashboard/dataset_hour.csv")
 
 # Filter data
 day_clean_df["dteday"] = pd.to_datetime(day_clean_df["dteday"])

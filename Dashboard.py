@@ -94,10 +94,14 @@ holiday_df = create_byholiday_df(main_df)
 workingday_df = create_byworkingday_df(main_df)
 season_df = create_byseason_df(main_df)
 weather_df = create_byweather_df(main_df)
-hourly_df = hourly_df.replace({
-    "yr": {0: 2011, 1: 2012}
-})
 temp_category_df = create_by_temp_category_df(second_df)
+
+# List dari dataframe
+dfs = [casual_register_df, monthly_df, hourly_df, holiday_df, workingday_df, season_df, weather_df, temp_category_df]
+
+# Loop untuk menggantikan nilai dalam kolom 'yr' di setiap dataframe
+for df in dfs:
+    df.replace({"yr": {0: 2011, 1: 2012}}, inplace=True)
 
 st.header('Bike Sharing Dashboard')
 # Menampilkan Bagaimana tren terakhir terkait jumlah pengguna baru dengan pengguna casual dalam beberapa tahun terakhir

@@ -134,9 +134,6 @@ plt.title("Jumlah total sepeda yang disewakan berdasarkan Bulan dan tahun")
 plt.legend(title="Tahun", loc="upper right")  
 plt.xticks(ticks=monthly_df["mnth"], labels=monthly_df["mnth"])
 plt.tight_layout()
-for line in ax.lines:
-    for x, y in zip(line.get_xdata(), line.get_ydata()):
-        plt.text(x, y, '{:.0f}'.format(y), color="white", ha="center", fontsize=8).set_backgroundcolor("gray")
 st.pyplot(fig)
 
 # pola yang terjadi pada jumlah total penyewaan sepeda berdasarkan Jam
